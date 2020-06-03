@@ -103,10 +103,13 @@ module.exports.actions =async(ctx,actionName) =>
     {
         var today = new Date();
         var today1 =ctx.session.time1;
-        
+        var diff =(today.getTime() - today1.getTime()) / 1000;
+        diff /= 60;
+      var di=diff.split('.');
+      var r=di[1].slice(0,2);
         ctx.session.start++;
         
-        let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4</b>`;
+        let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4\nTime Consumed is:${di[0]}mins and ${r}secs.</b>`;
         console.log(ctx.from.username+ctx.session.score);
         ctx.editMessageText(msg,
             Extra.HTML())
