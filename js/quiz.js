@@ -95,6 +95,7 @@ module.exports.actions =async(ctx,actionName) =>
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
+        console.log(ctx);
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
