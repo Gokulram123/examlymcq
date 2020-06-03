@@ -441,6 +441,5 @@ bot.command('quiz',async ctx=>{
 
 
 actionHandler(bot);
-
-
+textHandler(bot);
 bot.launch()

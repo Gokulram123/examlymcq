@@ -1,9 +1,9 @@
 
-// var request = require('request');
-// const Extra=require('telegraf/extra')
-// module.exports.textHandler=bot=>{
-//     bot.on('text',ctx=>
-//     {
+var request = require('request');
+const Extra=require('telegraf/extra')
+module.exports.textHandler=bot=>{
+    bot.on('text',ctx=>
+    {
 //         var data=request({url: 'https://api.covid19india.org/data.json', json: true}, function(err, res, json) {
 //         if (err) {
 //           throw err;
@@ -165,8 +165,8 @@
 //         }
 //         if(flag==false)
 //     {
-//         ctx.reply('Sorry,Your input could not be recognized.\n Refer /help')
-//     }
+        ctx.reply('Sorry,Your input could not be recognized.\n Refer /help')
+   }
 //    }
 
 //                 )}
@@ -177,8 +177,8 @@
     
 
     
-// })
-// }
+ )
+}
 
 
 

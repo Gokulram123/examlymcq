@@ -1,3 +1,4 @@
+
 [
   {
    "ques":"N men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
@@ -7,23 +8,23 @@
    "video":"https://youtube.com"
   },
   {
-    "ques":"M men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "ques":"LOTUS is coded as LNPTTVS and RAIN is coded as RZBHJN. How will DEER be coded in the same language ? ",
     "id":2,
-    "options":[28,24,20,30],
-    "ans":0,
-    "video":"https://youtube.com"
-   },
-   {
-    "ques":"Q men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
-    "id":3,
-    "options":[28,24,20,30],
+    "options":["CEEEQS","DCDCDR","DDFDFR","None of these"],
     "ans":2,
     "video":"https://youtube.com"
    },
    {
-    "ques":"R men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "ques":"3 women, 7 men and 5 children are to be arranged in a row. Find the probability that all 3 women are seated together.",
+    "id":3,
+    "options":["1/35","1/210","1/45","1/209"],
+    "ans":1,
+    "video":"https://youtube.com"
+   },
+   {
+    "ques":"A+B means A is mother of B\nA×B means A is sister of B\nA=B means A is daughter of B\nA/B means A is father of B\nIn the relation P+R/T×S=Q, how is Q related to R ?",
     "id":4,
-    "options":[28,24,20,30],
+    "options":["Sister","Husband",20,30],
     "ans":3,
     "video":"https://youtube.com"
    },
