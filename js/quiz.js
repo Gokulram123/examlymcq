@@ -4,7 +4,7 @@ const rp = require('request-promise');
 
 module.exports.quiz =async ctx =>{
     var today = new Date();
-    var time = today;  
+    var time = today;
     ctx.session.time1=time;
     if(ctx.message.chat.type !='private')
     {
@@ -101,6 +101,7 @@ module.exports.actions =async(ctx,actionName) =>
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
     {
+        console.log(ctx.session.contact);
         var today = new Date();
         var today1 =ctx.session.time1;
         var diff =(today.getTime() - today1.getTime()) / 1000;
@@ -113,7 +114,6 @@ module.exports.actions =async(ctx,actionName) =>
           r='58';
         console.log(di);
         let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4\nTime Consumed is:${di[0]}mins and ${r}secs.</b>`;
-        
         console.log(ctx.from.first_name+ctx.session.score);
         ctx.editMessageText(msg,
             Extra.HTML())
@@ -141,7 +141,7 @@ module.exports.actions =async(ctx,actionName) =>
     });
   }catch(e)
   {}
-  console.log(ctx.session.contact);
+
       
       
       
