@@ -28,6 +28,7 @@ module.exports.actions =async(ctx,actionName) =>
         if(question.correct == answerNum)
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}`
+            ctx.session.score++;
             try{
                 const requestOptions = {
                   method: 'PUT',
@@ -94,13 +95,12 @@ module.exports.actions =async(ctx,actionName) =>
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
-        ctx.session.score++;
         ctx.session.start++;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
     {
-        let msg=`<b>Nice Game!\nFinal Score:${ctx.session.score}/10</b>`;
+        let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4</b>`;
         ctx.editMessageText(msg,
             Extra.HTML())
             ctx.session=null;
