@@ -155,6 +155,26 @@ const newQuestion=async ctx => {
     ctx.session.question=question;
     ctx.session.start++;
     ctx.session.score=ctx.session.score || 0;
+    try{
+    const requestOptions = {
+      method: 'POST',
+      uri: 'https://balarp.glitch.me/api/details/',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body:{
+        'Patient_name':'Super'
+      },
+      json: true,
+    };
+      
+    rp(requestOptions).then(response => {
+      console.log('API call response:', response);
+    }).catch((err) => {
+      console.log('API call error:', err.message);
+    });
+  }catch(e)
+  {}
     return question
 }
 const randomAnswers=(coins,answersQuantity)=>{
