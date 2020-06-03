@@ -3,7 +3,9 @@ const fs=require("fs");
 const rp = require('request-promise');
 
 module.exports.quiz =async ctx =>{
-
+    var today = new Date();
+    var time = today;  
+    ctx.session.time1=time;
     if(ctx.message.chat.type !='private')
     {
         ctx.reply('Quiz available in private chat -> @aptitudequizbot')
@@ -99,6 +101,11 @@ module.exports.actions =async(ctx,actionName) =>
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
     {
+        var today = new Date();
+        var today1 =ctx.session.time1;
+        
+        ctx.session.start++;
+        
         let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4</b>`;
         console.log(ctx.from.username+ctx.session.score);
         ctx.editMessageText(msg,
