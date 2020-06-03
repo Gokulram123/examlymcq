@@ -40,9 +40,9 @@ module.exports.actions =async(ctx,actionName) =>
                 };
                 
                 rp(requestOptions).then(response => {
-                  console.log('API call response:', response);
+                  //console.log('API call response:', response);
                 }).catch((err) => {
-                  console.log('API call error:', err.message);
+                  //console.log('API call error:', err.message);
                 });
               }catch(e)
               {}
@@ -58,9 +58,9 @@ module.exports.actions =async(ctx,actionName) =>
                 };
                 
                 rp(requestOptions).then(response => {
-                  console.log('API call response:', response);
+                  //console.log('API call response:', response);
                 }).catch((err) => {
-                  console.log('API call error:', err.message);
+                  //console.log('API call error:', err.message);
                 });
               }catch(e)
               {}
@@ -78,9 +78,9 @@ module.exports.actions =async(ctx,actionName) =>
                 };
                 
                 rp(requestOptions).then(response => {
-                  console.log('API call response:', response);
+                  //console.log('API call response:', response);
                 }).catch((err) => {
-                  console.log('API call error:', err.message);
+                  //console.log('API call error:', err.message);
                 });
               }catch(e)
               {
@@ -100,6 +100,7 @@ module.exports.actions =async(ctx,actionName) =>
     }else if(actionName=='quit' || ctx.session.start>=4)
     {
         let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4</b>`;
+        console.log(ctx.from.username+ctx.session.score);
         ctx.editMessageText(msg,
             Extra.HTML())
             ctx.session=null;
