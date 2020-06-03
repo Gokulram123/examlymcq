@@ -92,10 +92,12 @@ module.exports.actions =async(ctx,actionName) =>
     }
     else if(actionName=='next' && ctx.session.start!=4)
     {
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        console.log(time);
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
-        console.log(ctx);
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
@@ -156,26 +158,26 @@ const newQuestion=async ctx => {
     ctx.session.question=question;
     ctx.session.start++;
     ctx.session.score=ctx.session.score || 0;
-    try{
-    const requestOptions = {
-      method: 'POST',
-      uri: 'https://balarp.glitch.me/api/details/',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body:{
-        'Patient_name':'Super'
-      },
-      json: true,
-    };
+//     try{
+//     const requestOptions = {
+//       method: 'POST',
+//       uri: 'https://balarp.glitch.me/api/details/',
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       body:{
+//         'Patient_name':'Super'
+//       },
+//       json: true,
+//     };
       
-    rp(requestOptions).then(response => {
-      console.log('API call response:', response);
-    }).catch((err) => {
-      console.log('API call error:', err.message);
-    });
-  }catch(e)
-  {}
+//     rp(requestOptions).then(response => {
+//       console.log('API call response:', response);
+//     }).catch((err) => {
+//       console.log('API call error:', err.message);
+//     });
+//   }catch(e)
+//   {}
     return question
 }
 const randomAnswers=(coins,answersQuantity)=>{
