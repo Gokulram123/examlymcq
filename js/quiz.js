@@ -24,7 +24,7 @@ module.exports.actions =async(ctx,actionName) =>
     if(actionName.match(re)) {
         answerNum=actionName[actionName.length-1];
         const question = ctx.session.question;
-        console.log(answerNum);
+        //console.log(answerNum);
         if(question.correct == answerNum)
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}`
@@ -95,7 +95,6 @@ module.exports.actions =async(ctx,actionName) =>
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
-        ctx.session.start++;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
@@ -144,7 +143,7 @@ const newQuestion=async ctx => {
     }
     question.answers=randomAnswers(coins,4);
     question.options=question.answers[w].options;
-    console.log(question.answers[w].ques);
+    //console.log(question.answers[w].ques);
     question.correct=question.answers[w].ans;
     question.url=question.answers[w].video;
     question.quest=question.answers[w].ques;
@@ -153,6 +152,7 @@ const newQuestion=async ctx => {
     if(w>=4)
     w=0;
     ctx.session.question=question;
+    ctx.session.start++;
     ctx.session.score=ctx.session.score || 0;
     return question
 }
