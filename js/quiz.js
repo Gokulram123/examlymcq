@@ -141,7 +141,7 @@ module.exports.actions =async(ctx,actionName) =>
     });
   }catch(e)
   {}
-      
+  console.log(ctx.session.contact);
       
       
       
