@@ -126,9 +126,10 @@ module.exports.actions =async(ctx,actionName) =>
         'Content-Type': 'application/json'
       },
       body:{
-        'Name':,
+        'Name':ctx.from.first_name,
         'Phone Number':,
-        ''
+        'Total Score':,
+        'Time Consumed':,
       },
       json: true,
     };

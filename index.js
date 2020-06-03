@@ -50,7 +50,6 @@ bot.start(ctx=>
 ctx.replyWithMarkdown('Please give mobile number access to continue further.', keyboard)
   })
 
-bot.on('contact',)
 bot.help(ctx=>ctx.reply('Here is the complete walk-through about the Bot.\
 <b><u>\n\nCommands:</u></b>\n\n\
 /start\nWelcome to the Bot !!!\n\n\
@@ -63,7 +62,11 @@ bot.command('quiz',async ctx=>{
   await quiz(ctx);
 });
 
- bot.on('contact',ctx=>ctx.reply('Thank you..Your id has been validated.Please refer \n/help'))
+ bot.on('contact',ctx=>
+        {
+   ctx.session.contact=
+   ctx.reply('Thank you..Your id has been validated.Please refer \n/help')
+ })
 
 // bot.command('district',ctx=>ctx.reply('Enter the District name in India for which the count is needed :'))
 
