@@ -34,7 +34,7 @@ module.exports.actions =async(ctx,actionName) =>
             try{
                 const requestOptions = {
                   method: 'PUT',
-                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.username}/increment/get`,
+                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.first_name}/increment/get`,
                   headers: {
                     'Content-Type': 'application/json'
                   },
@@ -52,7 +52,7 @@ module.exports.actions =async(ctx,actionName) =>
               try{
                 const requestOptions = {
                   method: 'PUT',
-                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.username}c/increment/get`,
+                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.first_name}c/increment/get`,
                   headers: {
                     'Content-Type': 'application/json'
                   },
@@ -72,7 +72,7 @@ module.exports.actions =async(ctx,actionName) =>
             try{
                 const requestOptions = {
                   method: 'PUT',
-                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.username}/increment/get`,
+                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.first_name}/increment/get`,
                   headers: {
                     'Content-Type': 'application/json'
                   },
