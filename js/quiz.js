@@ -91,10 +91,7 @@ module.exports.actions =async(ctx,actionName) =>
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
     }
     else if(actionName=='next' && ctx.session.start!=4)
-    {
-        var today = new Date();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        console.log(time);
+    {      
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
