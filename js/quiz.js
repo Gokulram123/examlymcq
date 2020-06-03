@@ -109,12 +109,41 @@ module.exports.actions =async(ctx,actionName) =>
       var di=diff.split('\.');
         ctx.session.start++;
         var r=di[1].slice(0,2);
+        if(r>='60')
+          r='58';
         console.log(di);
         let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4\nTime Consumed is:${di[0]}mins and ${r}secs.</b>`;
         
-        console.log(ctx.from.username+ctx.session.score);
+        console.log(ctx.from.first_name+ctx.session.score);
         ctx.editMessageText(msg,
             Extra.HTML())
+      
+          try{
+    const requestOptions = {
+      method: 'POST',
+      uri: 'https://balarp.glitch.me/api/details/',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body:{
+        'Name':,
+        'Phone Number':,
+        ''
+      },
+      json: true,
+    };
+      
+    rp(requestOptions).then(response => {
+      console.log('API call response:', response);
+    }).catch((err) => {
+      console.log('API call error:', err.message);
+    });
+  }catch(e)
+  {}
+      
+      
+      
+      
             ctx.session=null;
     }
     else if(actionName=='SOLUTION')
