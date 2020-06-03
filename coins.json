@@ -1,0 +1,37 @@
+[
+  {
+   "ques":"N men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+   "id":1,
+   "options":[28,24,20,30],
+   "ans":0,
+   "video":"https://youtube.com"
+  },
+  {
+    "ques":"M men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "id":2,
+    "options":[28,24,20,30],
+    "ans":0,
+    "video":"https://youtube.com"
+   },
+   {
+    "ques":"Q men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "id":3,
+    "options":[28,24,20,30],
+    "ans":2,
+    "video":"https://youtube.com"
+   },
+   {
+    "ques":"R men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "id":4,
+    "options":[28,24,20,30],
+    "ans":3,
+    "video":"https://youtube.com"
+   },
+   {
+    "ques":"F men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "id":5,
+    "options":[28,24,2,30],
+    "ans":2,
+    "video":"https://youtube.com"
+   }
+]
