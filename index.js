@@ -64,7 +64,7 @@ bot.command('quiz',async ctx=>{
 
  bot.on('contact',ctx=>
         {
-   ctx.session.contact=
+   ctx.session.contact=ctx.message.contact.phone_number;
    ctx.reply('Thank you..Your id has been validated.Please refer \n/help')
  })
 
