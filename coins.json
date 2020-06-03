@@ -1,4 +1,3 @@
-
 [
   {
    "ques":"N men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
@@ -24,15 +23,15 @@
    {
     "ques":"A+B means A is mother of B\nA×B means A is sister of B\nA=B means A is daughter of B\nA/B means A is father of B\nIn the relation P+R/T×S=Q, how is Q related to R ?",
     "id":4,
-    "options":["Sister","Husband",20,30],
-    "ans":3,
+    "options":["Sister","Husband","Wife","Mother"],
+    "ans":2,
     "video":"https://youtube.com"
    },
    {
-    "ques":"F men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+    "ques":"CP of 80 articles is same as the SP of X articles. If profit earned is 60%, find the value of X. ",
     "id":5,
-    "options":[28,24,2,30],
-    "ans":2,
+    "options":[70,60,40,50],
+    "ans":3,
     "video":"https://youtube.com"
    }
 ]
