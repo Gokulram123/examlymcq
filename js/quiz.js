@@ -118,29 +118,29 @@ module.exports.actions =async(ctx,actionName) =>
         ctx.editMessageText(msg,
             Extra.HTML())
       
-    //       try{
-    // const requestOptions = {
-    //   method: 'POST',
-    //   uri: 'https://balarp.glitch.me/api/details/',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body:{
-    //     'Name':ctx.from.first_name,
-    //     'Phone_Number':ctx.session.contact,
-    //     'Total_Score':ctx.session.score,
-    //     'Time_Consumed':`${di[0]}mins and ${r}secs`,
-    //   },
-    //   json: true,
-    // };
+          try{
+    const requestOptions = {
+      method: 'POST',
+      uri: 'https://balarp.glitch.me/api/details/',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body:{
+        'Name':ctx.from.first_name,
+        'Phone_Number':ctx.session.contact,
+        'Total_Score':ctx.session.score,
+        'Time_Consumed':`${di[0]}mins and ${r}secs`,
+      },
+      json: true,
+    };
       
-//     rp(requestOptions).then(response => {
-//       console.log('API call response:', response);
-//     }).catch((err) => {
-//       console.log('API call error:', err.message);
-//     });
-//   }catch(e)
-//   {}
+    rp(requestOptions).then(response => {
+      console.log('API call response:', response);
+    }).catch((err) => {
+      console.log('API call error:', err.message);
+    });
+  }catch(e)
+  {}
       
       
       
