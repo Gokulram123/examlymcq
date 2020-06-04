@@ -19,7 +19,7 @@ module.exports.quiz1 =async ctx =>{
             Extra.markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
     //}
 }
-module.exports.actions1 =async(ctx,actionName) =>
+module.exports.actions =async(ctx,actionName) =>
 {
     let res;
     const re=/answer[0-3]/g;

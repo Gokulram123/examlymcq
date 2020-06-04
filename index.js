@@ -455,7 +455,7 @@ bot.action('Take Test',async ctx=>
 
 bot.action('Take Test ↗️',async ctx=>
              {
-   await quiz1(ctx);
+   await quiz(ctx);
   });
 
 
