@@ -410,8 +410,10 @@ const inline7= (m)=>m.inlineKeyboard(
 
 
   bot.action('Foundation Video',ctx=>
+             {
   ctx.reply
-  ('Checkout the link..'))
+  ('Checkout the link..'+video,Extra.HTML())
+  };
 
 
 // //   bot.hears(('Tamil Nadu'),ctx=>{
