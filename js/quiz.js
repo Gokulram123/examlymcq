@@ -47,9 +47,13 @@ module.exports.actions =async(ctx,actionName) =>
             {
               ctx.session.start+=3;
             }
-          else
+          else if(r==1)
             {
-          ctx.session.start+=r-1;
+             ctx.session.start+=2;
+            }
+          else if(r==2)
+            {
+              ctx.session.start++;
             }
           console.log(ctx.session.start);
         }
