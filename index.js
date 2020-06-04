@@ -73,7 +73,7 @@ bot.command('quiz',async ctx=>{
 
 // bot.command('about',ctx=>ctx.reply('Data Source - <a href="https://api.covid19india.org">https://api.covid19india.org</a>\n\n\
 // Developer Contact = <a href="https://t.me/balarp">Bala Srinyvas R P</a>',Extra.HTML().webPreview(false)))
-bot.command('quiz',async ctx=>
+bot.command('percentage',async ctx=>
             {
   ctx.reply(
      `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline7(m)));
@@ -266,7 +266,7 @@ bot.command('quiz',async ctx=>
 
 const inline7= (m)=>m.inlineKeyboard(
   [
-  [m.callbackButton('Foundation Video','Foundation Video')],[m.callbackButton('Sample Test','Sample Test')]
+  [m.callbackButton('Foundation Video','Foundation Video')],[m.callbackButton('Take Test','Take Test')]
   ]) 
 
 //   const inline1= (m)=>m.inlineKeyboard(
@@ -411,9 +411,18 @@ const inline7= (m)=>m.inlineKeyboard(
 
   bot.action('Foundation Video',ctx=>
              {
+   let video='https://youtube.com/'; 
   ctx.reply
   ('Checkout the link..'+video,Extra.HTML())
-  };
+  });
+
+
+bot.action('Take Test',async ctx=>
+             {
+   await quiz(ctx);
+  });
+
+
 
 
 // //   bot.hears(('Tamil Nadu'),ctx=>{
