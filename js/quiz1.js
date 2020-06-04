@@ -48,16 +48,16 @@ module.exports.actions1 =async(ctx,actionName) =>
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
-    else if(actionName=='next' && ctx.session.start!=4)
+    else if(actionName=='next' && ctx.session.start1!=4)
     {      
         var today=new Date();
         ctx.session.time1=today;
-        let question = await newQuestion(ctx);
+        let question = await newQuestion1(ctx);
         let logo=question.quest;
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
-    }else if(actionName=='quit' || ctx.session.start>=4)
+    }else if(actionName=='quit' || ctx.session.start1>=4)
     {
         console.log(ctx.session.contact);
         var today = new Date();
@@ -131,7 +131,7 @@ const keyboard1=(m,step,answers)=>{
 const newQuestion1=async ctx => {
     ctx.session.start1=ctx.session.start1 || 0;
     let w=ctx.session.start1;
-    const filePath1='./coins.json';
+    const filePath1='./average.json';
     const coins=await readFile1(filePath1);
     const question ={
         answers :[],

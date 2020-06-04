@@ -1,6 +1,6 @@
 [
   {
-   "ques":"N men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+   "ques":"M men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
    "id":1,
    "options":[28,24,20,30],
    "ans":0,
@@ -8,7 +8,7 @@
    "avgtime":"0 mins and 40 secs"
   },
   {
-    "ques":"LOTUS is coded as LNPTTVS and RAIN is coded as RZBHJN. How will DEER be coded in the same language ? ",
+    "ques":"Here,LOTUS is coded as LNPTTVS and RAIN is coded as RZBHJN. How will DEER be coded in the same language ? ",
     "id":2,
     "options":["CEEEQS","DCDCDR","DDFDFR","None of these"],
     "ans":2,
@@ -16,7 +16,7 @@
     "avgtime":"0 mins and 50 secs"
    },
    {
-    "ques":"3 women, 7 men and 5 children are to be arranged in a row. Find the probability that all 3 women are seated together.",
+    "ques":"In a school,3 women, 7 men and 5 children are to be arranged in a row. Find the probability that all 3 women are seated together.",
     "id":3,
     "options":["1/35","1/210","1/45","1/209"],
     "ans":1,
@@ -24,7 +24,7 @@
    "avgtime":"1 mins and 20 secs"
    },
    {
-    "ques":"A+B means A is mother of B\nA×B means A is sister of B\nA=B means A is daughter of B\nA/B means A is father of B\nIn the relation P+R/T×S=Q, how is Q related to R ?",
+    "ques":"Consider,A+B means A is mother of B\nA×B means A is sister of B\nA=B means A is daughter of B\nA/B means A is father of B\nIn the relation P+R/T×S=Q, how is Q related to R ?",
     "id":4,
     "options":["Sister","Husband","Wife","Mother"],
     "ans":2,
@@ -32,7 +32,7 @@
    "avgtime":"1 mins and 21 secs"
    },
    {
-    "ques":"CP of 80 articles is same as the SP of X articles. If profit earned is 60%, find the value of X. ",
+    "ques":"Let CP of 80 articles is same as the SP of X articles. If profit earned is 60%, find the value of X. ",
     "id":5,
     "options":[70,60,40,50],
     "ans":3,
