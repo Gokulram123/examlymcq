@@ -46,12 +46,12 @@ module.exports.actions =async(ctx,actionName) =>
             res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is`;
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
-        ctx.session.time1=null;
+      ctx.session.time1=today;
     }
     else if(actionName=='next' && ctx.session.start!=4)
     {      
         var today=new Date();
-        ctx.session.time1=today.getTime();
+      
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
