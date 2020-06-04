@@ -42,6 +42,7 @@ module.exports.actions =async(ctx,actionName) =>
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
+            ctx.session.start++;
         }
         else
         {
@@ -162,7 +163,6 @@ const newQuestion=async ctx => {
     if(w>=4)
     w=0;
     ctx.session.question=question;
-    ctx.session.start++;
     ctx.session.score=ctx.session.score || 0;
 //     try{
 //     const requestOptions = {
