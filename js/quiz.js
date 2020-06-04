@@ -6,18 +6,18 @@ module.exports.quiz =async ctx =>{
     var today = new Date();
     var time = today;
     ctx.session.time1=time;
-    if(ctx.message.chat.type !='private')
-    {
-        ctx.reply('Quiz available in private chat -> @aptitudequizbot')
-    }
-    else
-    {
+    // if(ctx.message.chat.type !='private')
+    // {
+    //     ctx.reply('Quiz available in private chat -> @aptitudequizbot')
+    // }
+    // else
+    //{
         let question = await newQuestion(ctx);
         let logo=question.quest
         let msg=logo
         return ctx.replyWithHTML(msg,
             Extra.markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
-    }
+    //}
 }
 module.exports.actions =async(ctx,actionName) =>
 {
