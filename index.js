@@ -269,6 +269,11 @@ const inline7= (m)=>m.inlineKeyboard(
   [m.callbackButton('Foundation Video','Foundation Video')],[m.callbackButton('Take Test','Take Test')]
   ]) 
 
+const inline8= (m)=>m.inlineKeyboard(
+  [
+  [m.callbackButton('Take Test','Take Test')]
+  ]) 
+
 //   const inline1= (m)=>m.inlineKeyboard(
 //     [
 //     [m.callbackButton('North Region Detailed List ↗️','North Region Detailed List ↗️')]
@@ -412,8 +417,8 @@ const inline7= (m)=>m.inlineKeyboard(
   bot.action('Foundation Video',ctx=>
              {
    let video='https://youtube.com/'; 
-  ctx.reply
-  ('Checkout the link..'+video,Extra.HTML())
+  ctx.editMessageText
+  ('Checkout the link..'+video,Extra.HTML().markup(m=>inline8(m)))
   });
 
 
