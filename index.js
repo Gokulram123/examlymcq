@@ -10,7 +10,8 @@ const {inlineHandler}=require("./js/inlineHandler.js")
 const {actionHandler}=require("./js/actionHandler.js")
 const {quiz}=require("./js/quiz.js")
 const {quiz1}=require("./js/quiz1.js")
-
+//const {inlineHandler}=require("./js/inlineHandler.js")
+const {actionHandler1}=require("./js/actionHandler1.js")
 
 const rp = require('request-promise');
 
@@ -489,5 +490,6 @@ bot.action('Take Test ↗️',async ctx=>
 
 
 actionHandler(bot);
+actionHandler1(bot);
 textHandler(bot);
 bot.launch()
