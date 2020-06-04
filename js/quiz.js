@@ -42,10 +42,16 @@ module.exports.actions =async(ctx,actionName) =>
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
-            while(ctx.session.start%3!=0)
-              {
-              ctx.session.start++; 
-              }
+           var r=ctx.session.start%3;
+          if(r==0)
+            {
+              ctx.session.start+=3;
+            }
+          else
+            {
+          ctx.session.start+=r-1;
+            }
+          console.log(ctx.session.start);
         }
         else
         {
