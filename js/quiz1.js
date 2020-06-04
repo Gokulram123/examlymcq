@@ -6,6 +6,7 @@ module.exports.quiz1 =async ctx =>{
     var today = new Date();
     var time = today;
     ctx.session.time1=time;
+    ctx.session.totaltime1=time;
     // if(ctx.message.chat.type !='private')
     // {
     //     ctx.reply('Quiz available in private chat -> @aptitudequizbot')
@@ -19,10 +20,10 @@ module.exports.quiz1 =async ctx =>{
             Extra.markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
     //}
 }
-module.exports.actions = async(ctx,actionName) =>
+module.exports.actions1 = async(ctx,actionName) =>
 {
     let res;
-    const re=/answer[0-3]/g;
+    const re=/answers[0-3]/g;
     if(actionName.match(re)) {
         answerNum=actionName[actionName.length-1];
         const question = ctx.session.question;
@@ -61,7 +62,7 @@ module.exports.actions = async(ctx,actionName) =>
     {
         console.log(ctx.session.contact);
         var today = new Date();
-        var today1 =ctx.session.time1;
+        var today1 =ctx.session.totaltime1;
         var diff =(today.getTime() - today1.getTime()) / 1000;
         diff /= 60;
         diff+="";
@@ -103,10 +104,10 @@ module.exports.actions = async(ctx,actionName) =>
       
       ctx.session=null;
     }
-    else if(actionName=='SOLUTIO')
+    else if(actionName=='solution')
     {
         let video=ctx.session.question.answers[ctx.session.start].video;
-        ctx.reply(video,
+        ctx.reply("video",
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
 }
@@ -123,7 +124,7 @@ const keyboard1=(m,step,answers)=>{
     return [
         [m.callbackButton('NEXT','Next')],
         [m.callbackButton('QUIT','Quit')],
-        [m.callbackButton('SOLUTION','SOLUTIO')]
+        [m.callbackButton('SOLUTION','solution')]
     ]
  }
 }

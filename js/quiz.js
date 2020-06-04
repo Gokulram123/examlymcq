@@ -6,6 +6,7 @@ module.exports.quiz =async ctx =>{
     var today = new Date();
     var time = today;
     ctx.session.time1=time;
+    ctx.session.totaltime=time;
     // if(ctx.message.chat.type !='private')
     // {
     //     ctx.reply('Quiz available in private chat -> @aptitudequizbot')
@@ -61,7 +62,7 @@ module.exports.actions =async(ctx,actionName) =>
     {
         console.log(ctx.session.contact);
         var today = new Date();
-        var today1 =ctx.session.time1;
+        var today1 =ctx.session.totaltime;
         var diff =(today.getTime() - today1.getTime()) / 1000;
         diff /= 60;
         diff+="";

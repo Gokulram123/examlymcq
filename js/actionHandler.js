@@ -4,7 +4,7 @@ module.exports.actionHandler =bot => {
     bot.action([/answer[0-3]/,/next/,/quit/,/SOLUTION/],ctx =>{
          actions(ctx,ctx.match[0]);
     })
-    bot.action([/answers[0-3]/,/Next/,/Quit/,/SOLUTIO/],ctx =>{
+    bot.action([/answers[0-3]/,/Next/,/Quit/,/solution/],ctx =>{
          actions1(ctx,ctx.match[0]);
     })
 }
