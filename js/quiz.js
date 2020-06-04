@@ -42,15 +42,19 @@ module.exports.actions =async(ctx,actionName) =>
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
-            ctx.session.start++;
+            while(ctx.session.start%3!=0)
+              {
+              ctx.session.start++; 
+              }
         }
         else
         {
             res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
+            ctx.session.start++;
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
     }
-    else if(actionName=='next' && ctx.session.start!=4)
+    else if(actionName=='next' && ctx.session.start<4)
     {      
         var today=new Date();
         ctx.session.time1=today;
