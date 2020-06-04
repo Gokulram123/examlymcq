@@ -3,23 +3,23 @@ const fs=require("fs");
 const rp = require('request-promise');
 
 module.exports.quiz1 =async ctx =>{
-    var today1 = new Date();
-    var time1 = today1;
-    ctx.session.time2=time1;
+    var today = new Date();
+    var time = today;
+    ctx.session.time1=time;
     // if(ctx.message.chat.type !='private')
     // {
     //     ctx.reply('Quiz available in private chat -> @aptitudequizbot')
     // }
     // else
     //{
-        let question = await newQuestion(ctx);
+        let question = await newQuestion1(ctx);
         let logo=question.quest
         let msg=logo
         return ctx.replyWithHTML(msg,
-            Extra.markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
+            Extra.markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
     //}
 }
-module.exports.actions =async(ctx,actionName) =>
+module.exports.actions1 =async(ctx,actionName) =>
 {
     let res;
     const re=/answer[0-3]/g;
@@ -46,7 +46,7 @@ module.exports.actions =async(ctx,actionName) =>
         {
             res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
         }
-        ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
+        ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
     else if(actionName=='next' && ctx.session.start!=4)
     {      
@@ -56,7 +56,7 @@ module.exports.actions =async(ctx,actionName) =>
         let logo=question.quest;
         let msg=logo;
         ctx.editMessageText(msg,
-            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
+            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
     }else if(actionName=='quit' || ctx.session.start>=4)
     {
         console.log(ctx.session.contact);
@@ -101,19 +101,17 @@ module.exports.actions =async(ctx,actionName) =>
   {}
 
       
-      
-      
-            ctx.session=null;
+      ctx.session=null;
     }
     else if(actionName=='SOLUTION')
     {
         let video=ctx.session.question.answers[ctx.session.start].video;
         ctx.reply(video,
-            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,2))))
+            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
 }
 
-const keyboard=(m,step,answers)=>{
+const keyboard1=(m,step,answers)=>{
        if(step===1)
        {
        return [
@@ -130,11 +128,11 @@ const keyboard=(m,step,answers)=>{
  }
 }
 
-const newQuestion=async ctx => {
-    ctx.session.start=ctx.session.start || 0;
-    let w=ctx.session.start;
-    const filePath='./coins.json';
-    const coins=await readFile(filePath);
+const newQuestion1=async ctx => {
+    ctx.session.start1=ctx.session.start1 || 0;
+    let w=ctx.session.start1;
+    const filePath1='./coins.json';
+    const coins=await readFile1(filePath1);
     const question ={
         answers :[],
         correct :'',
@@ -143,7 +141,7 @@ const newQuestion=async ctx => {
         options:[],
         avgtime:''
     }
-    question.answers=randomAnswers(coins,4);
+    question.answers=randomAnswers1(coins,4);
     question.options=question.answers[w].options;
     //console.log(question.answers[w].ques);
     question.correct=question.answers[w].ans;
@@ -154,7 +152,7 @@ const newQuestion=async ctx => {
     if(w>=4)
     w=0;
     ctx.session.question=question;
-    ctx.session.start++;
+    ctx.session.start1++;
     ctx.session.score=ctx.session.score || 0;
 //     try{
 //     const requestOptions = {
@@ -178,7 +176,7 @@ const newQuestion=async ctx => {
 //   {}
     return question
 }
-const randomAnswers=(coins,answersQuantity)=>{
+const randomAnswers1=(coins,answersQuantity)=>{
     const answers=[];
     const tmpArr=[];
     let a=0;
@@ -195,9 +193,9 @@ const randomAnswers=(coins,answersQuantity)=>{
     return answers;
 }
 
-const readFile =filePath =>{
+const readFile1 =filePath1 =>{
     try{
-      let rawData=fs.readFileSync(filePath);
+      let rawData=fs.readFileSync(filePath1);
       return JSON.parse(rawData);
     }catch(err)
     {

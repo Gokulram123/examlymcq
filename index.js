@@ -9,6 +9,7 @@ const {text}=require("./js/text.js")
 const {inlineHandler}=require("./js/inlineHandler.js")
 const {actionHandler}=require("./js/actionHandler.js")
 const {quiz}=require("./js/quiz.js")
+const {quiz1}=require("./js/quiz1.js")
 
 
 const rp = require('request-promise');
@@ -77,6 +78,13 @@ bot.command('percentage',async ctx=>
             {
   ctx.reply(
      `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline7(m)));
+  //await quiz(ctx);
+})
+
+bot.command('average',async ctx=>
+            {
+  ctx.reply(
+     `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline9(m)));
   //await quiz(ctx);
 })
 
@@ -274,6 +282,16 @@ const inline8= (m)=>m.inlineKeyboard(
   [m.callbackButton('Take Test','Take Test')]
   ]) 
 
+
+const inline9= (m)=>m.inlineKeyboard(
+  [
+  [m.callbackButton('Foundation Video ↗️','Foundation Video ↗️')],[m.callbackButton('Take Test ↗️','Take Test ↗️')]
+  ]) 
+
+const inline10= (m)=>m.inlineKeyboard(
+  [
+ [m.callbackButton('Take Test ↗️','Take Test ↗️')]
+  ]) 
 //   const inline1= (m)=>m.inlineKeyboard(
 //     [
 //     [m.callbackButton('North Region Detailed List ↗️','North Region Detailed List ↗️')]
@@ -421,10 +439,23 @@ const inline8= (m)=>m.inlineKeyboard(
   ('Checkout the link..'+video,Extra.HTML().markup(m=>inline8(m)))
   });
 
+bot.action('Foundation Video ↗️',ctx=>
+             {
+   let video='https://google.com/'; 
+  ctx.editMessageText
+  ('Checkout the link..'+video,Extra.HTML().markup(m=>inline10(m)))
+  });
+
 
 bot.action('Take Test',async ctx=>
              {
    await quiz(ctx);
+  });
+
+
+bot.action('Take Test ↗️',async ctx=>
+             {
+   await quiz1(ctx);
   });
 
 
