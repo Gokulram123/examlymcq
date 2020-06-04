@@ -19,7 +19,7 @@ module.exports.quiz1 =async ctx =>{
             Extra.markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
     //}
 }
-module.exports.actions =async(ctx,actionName) =>
+module.exports.actions = async(ctx,actionName) =>
 {
     let res;
     const re=/answer[0-3]/g;
@@ -48,7 +48,7 @@ module.exports.actions =async(ctx,actionName) =>
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
-    else if(actionName=='next' && ctx.session.start1!=4)
+    else if(actionName=='Next' && ctx.session.start1!=4)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -57,7 +57,7 @@ module.exports.actions =async(ctx,actionName) =>
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,1,question.options))))
-    }else if(actionName=='quit' || ctx.session.start1>=4)
+    }else if(actionName=='Quit' || ctx.session.start1>=4)
     {
         console.log(ctx.session.contact);
         var today = new Date();
@@ -103,7 +103,7 @@ module.exports.actions =async(ctx,actionName) =>
       
       ctx.session=null;
     }
-    else if(actionName=='SOLUTION')
+    else if(actionName=='SOLUTIO')
     {
         let video=ctx.session.question.answers[ctx.session.start].video;
         ctx.reply(video,
@@ -115,15 +115,15 @@ const keyboard1=(m,step,answers)=>{
        if(step===1)
        {
        return [
-           [m.callbackButton(answers[0],'answer0'),m.callbackButton(answers[1],'answer1')],
-           [m.callbackButton(answers[2],'answer2'),m.callbackButton(answers[3],'answer3')]
+           [m.callbackButton(answers[0],'answers0'),m.callbackButton(answers[1],'answers1')],
+           [m.callbackButton(answers[2],'answers2'),m.callbackButton(answers[3],'answers3')]
        ]
     }else if(step===2)
     {
     return [
-        [m.callbackButton('NEXT','next')],
-        [m.callbackButton('QUIT','quit')],
-        [m.callbackButton('SOLUTION','SOLUTION')]
+        [m.callbackButton('NEXT','Next')],
+        [m.callbackButton('QUIT','Quit')],
+        [m.callbackButton('SOLUTION','SOLUTIO')]
     ]
  }
 }
