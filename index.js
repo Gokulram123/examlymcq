@@ -73,7 +73,12 @@ bot.command('quiz',async ctx=>{
 
 // bot.command('about',ctx=>ctx.reply('Data Source - <a href="https://api.covid19india.org">https://api.covid19india.org</a>\n\n\
 // Developer Contact = <a href="https://t.me/balarp">Bala Srinyvas R P</a>',Extra.HTML().webPreview(false)))
-
+bot.command('quiz',async ctx=>
+            {
+  ctx.reply(
+     `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline7(m)));
+  //await quiz(ctx);
+})
 
 // bot.command('total',ctx=>{
   
@@ -259,10 +264,10 @@ bot.command('quiz',async ctx=>{
 // )
 // })
 
-// const inline= (m)=>m.inlineKeyboard(
-//   [
-//   [m.callbackButton('Statewise Detailed List ↗️','Statewise Detailed List ↗️')]
-//   ]) 
+const inline7= (m)=>m.inlineKeyboard(
+  [
+  [m.callbackButton('Foundation Video','Foundation Video')],[m.callbackButton('Sample Test','Sample Test')]
+  ]) 
 
 //   const inline1= (m)=>m.inlineKeyboard(
 //     [
@@ -404,17 +409,9 @@ bot.command('quiz',async ctx=>{
 //   .resize().extra()))
 
 
-//   bot.action('South Region Detailed List ↗️',ctx=>
-//   ctx.reply
-//   ('Customized Selection',
-//   Markup.keyboard(
-//     [
-//       ['Andaman and Nicobar Islands','Puducherry'],
-//       ['Telangana','Tamil Nadu','Karnataka'],
-//       ['Lakshadweep','Kerala','Andhra Pradesh']
-//     ]
-//     )
-//   .resize().extra()))
+  bot.action('Foundation Video',ctx=>
+  ctx.reply
+  ('Checkout the link..'))
 
 
 // //   bot.hears(('Tamil Nadu'),ctx=>{
