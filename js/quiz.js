@@ -34,24 +34,24 @@ module.exports.actions =async(ctx,actionName) =>
         diff+="";
       var di=diff.split('\.');
         var r=di[1].slice(0,2);
+        r/=2;
         if(r>='60')
           r='58';
         if(question.correct == answerNum)
         {
-            res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is `;
+            res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
         }
         else
         {
-            res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is`;
+            res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
-      ctx.session.time1=today;
     }
     else if(actionName=='next' && ctx.session.start!=4)
     {      
         var today=new Date();
-      
+        ctx.session.time1=today;
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
@@ -140,7 +140,8 @@ const newQuestion=async ctx => {
         correct :'',
         url:'',
         quest:'',
-        options:[]
+        options:[],
+        avgtime:''
     }
     question.answers=randomAnswers(coins,4);
     question.options=question.answers[w].options;
@@ -148,7 +149,7 @@ const newQuestion=async ctx => {
     question.correct=question.answers[w].ans;
     question.url=question.answers[w].video;
     question.quest=question.answers[w].ques;
-
+    question.avgtime=question.answers[w].avgtime;
     //console.log(question);
     if(w>=4)
     w=0;
