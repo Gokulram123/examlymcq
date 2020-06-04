@@ -27,73 +27,31 @@ module.exports.actions =async(ctx,actionName) =>
         answerNum=actionName[actionName.length-1];
         const question = ctx.session.question;
         //console.log(answerNum);
+        var today = new Date();
+        var today1 =ctx.session.time1;
+        var diff =(today.getTime() - today1.getTime()) / 1000;
+        diff /= 60;
+        diff+="";
+      var di=diff.split('\.');
+        var r=di[1].slice(0,2);
+        if(r>='60')
+          r='58';
         if(question.correct == answerNum)
         {
-            res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}`
+            res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is `;
             ctx.session.score++;
-            try{
-                const requestOptions = {
-                  method: 'PUT',
-                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.first_name}/increment/get`,
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
-                  json: true,
-                };
-                
-                rp(requestOptions).then(response => {
-                  //console.log('API call response:', response);
-                }).catch((err) => {
-                  //console.log('API call error:', err.message);
-                });
-              }catch(e)
-              {}
-
-              try{
-                const requestOptions = {
-                  method: 'PUT',
-                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.first_name}c/increment/get`,
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
-                  json: true,
-                };
-                
-                rp(requestOptions).then(response => {
-                  //console.log('API call response:', response);
-                }).catch((err) => {
-                  //console.log('API call error:', err.message);
-                });
-              }catch(e)
-              {}
         }
         else
         {
-            try{
-                const requestOptions = {
-                  method: 'PUT',
-                  uri: `https://api.backendless.com/C7C46BF0-D887-EE41-FFCC-C473E8648400/9579C9DB-155C-4D21-A30D-39190ED05E67/counters/${ctx.from.first_name}/increment/get`,
-                  headers: {
-                    'Content-Type': 'application/json'
-                  },
-                  json: true,
-                };
-                
-                rp(requestOptions).then(response => {
-                  //console.log('API call response:', response);
-                }).catch((err) => {
-                  //console.log('API call error:', err.message);
-                });
-              }catch(e)
-              {
-                  console.log(e);
-              }
-            res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}`
+            res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is`;
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
+        ctx.session.time1=null;
     }
     else if(actionName=='next' && ctx.session.start!=4)
     {      
+        var today=new Date();
+        ctx.session.time1=today.getTime();
         let question = await newQuestion(ctx);
         let logo=question.quest;
         let msg=logo;
