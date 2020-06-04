@@ -148,7 +148,7 @@ const newQuestion1=async ctx => {
     question.url=question.answers[w].video;
     question.quest=question.answers[w].ques;
     question.avgtime=question.answers[w].avgtime;
-    console.log(ctx);
+    console.log(ctx.from);
     if(w>=4)
     w=0;
     ctx.session.question=question;
