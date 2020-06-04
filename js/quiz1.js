@@ -106,9 +106,9 @@ module.exports.actions1 = async(ctx,actionName) =>
     }
     else if(actionName=='solution')
     {
-        let video=ctx.session.question.answers[ctx.session.start].video;
-        ctx.reply("video",
-            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,2))))
+        let video=ctx.session.question.answers[ctx.session.start1].video;
+        ctx.reply(video,
+            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,3))))
     }
 }
 
@@ -127,6 +127,13 @@ const keyboard1=(m,step,answers)=>{
         [m.callbackButton('SOLUTION','solution')]
     ]
  }
+  else if(step==3)
+    {
+      return [
+        [m.callbackButton('NEXT','Next')],
+        [m.callbackButton('QUIT','Quit')]
+    ]
+}
 }
 
 const newQuestion1=async ctx => {
