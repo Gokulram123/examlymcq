@@ -66,7 +66,10 @@ bot.command('quiz',async ctx=>{
         {
    ctx.session.contact=ctx.message.contact.phone_number;
    console.log(ctx.session.contact);
-   ctx.reply('Thank you..Your id has been validated.Please refer \n/help')
+   ctx.reply('Thank you..Your id has been validated.\nHere is the list of courses offered.\
+<b><u>\n\nCommands:</u></b>\n\n\
+/average\nConcepts on Average topic.\n\n\
+/percentage\nConcepts on Percentage topic.\n\n\',Extra.HTML())
  })
 
 // bot.command('district',ctx=>ctx.reply('Enter the District name in India for which the count is needed :'))
