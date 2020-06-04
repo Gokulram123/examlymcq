@@ -131,7 +131,7 @@ const keyboard1=(m,step,answers)=>{
 const newQuestion1=async ctx => {
     ctx.session.start1=ctx.session.start1 || 0;
     let w=ctx.session.start1;
-    const filePath1='./average.json';
+    const filePath1='./coins.json';
     const coins=await readFile1(filePath1);
     const question ={
         answers :[],
@@ -142,6 +142,7 @@ const newQuestion1=async ctx => {
         avgtime:''
     }
     question.answers=randomAnswers1(coins,4);
+    console.log(question.answers);
     question.options=question.answers[w].options;
     //console.log(question.answers[w].ques);
     question.correct=question.answers[w].ans;
@@ -179,8 +180,8 @@ const newQuestion1=async ctx => {
 const randomAnswers1=(coins,answersQuantity)=>{
     const answers=[];
     const tmpArr=[];
-    let a=0;
-    while(tmpArr.length<answersQuantity)
+    let a=5;
+    while(tmpArr.length<=answersQuantity)
     {
         if(tmpArr.indexOf(a)===-1)
         {
