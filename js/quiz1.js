@@ -59,6 +59,7 @@ module.exports.actions1 = async(ctx,actionName) =>
         else
         {
             res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
+            ctx.session.start1++;
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
