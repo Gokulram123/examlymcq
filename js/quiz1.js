@@ -42,6 +42,19 @@ module.exports.actions1 = async(ctx,actionName) =>
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
+            var r=ctx.session.start1%3;
+          if(r==0)
+            {
+              ctx.session.start1+=3;
+            }
+          else if(r==1)
+            {
+             ctx.session.start1+=2;
+            }
+          else if(r==2)
+            {
+              ctx.session.start1++;
+            }
         }
         else
         {
@@ -49,7 +62,7 @@ module.exports.actions1 = async(ctx,actionName) =>
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard1(m,2))))
     }
-    else if(actionName=='Next' && ctx.session.start1!=4)
+    else if(actionName=='Next' && ctx.session.start1<4)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -67,7 +80,6 @@ module.exports.actions1 = async(ctx,actionName) =>
         diff /= 60;
         diff+="";
       var di=diff.split('\.');
-        ctx.session.start++;
         var r=di[1].slice(0,2);
         if(r>='60')
           r='58';
@@ -161,7 +173,7 @@ const newQuestion1=async ctx => {
     if(w>=4)
     w=0;
     ctx.session.question=question;
-    ctx.session.start1++;
+    //ctx.session.start1++;
     ctx.session.score=ctx.session.score || 0;
 //     try{
 //     const requestOptions = {
