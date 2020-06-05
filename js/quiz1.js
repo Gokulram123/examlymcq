@@ -107,7 +107,7 @@ module.exports.actions1 = async(ctx,actionName) =>
     else if(actionName=='solution')
     {
         let video=ctx.session.question.answers[ctx.session.start1].video;
-        ctx.reply(video,
+        ctx.reply(`a href=${video}`,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard1(m,3))))
     }
 }
@@ -139,7 +139,7 @@ const keyboard1=(m,step,answers)=>{
 const newQuestion1=async ctx => {
     ctx.session.start1=ctx.session.start1 || 0;
     let w=ctx.session.start1;
-    const filePath1='./coins.json';
+    const filePath1='./average.json';
     const coins=await readFile1(filePath1);
     const question ={
         answers :[],
@@ -188,7 +188,7 @@ const newQuestion1=async ctx => {
 const randomAnswers1=(coins,answersQuantity)=>{
     const answers=[];
     const tmpArr=[];
-    let a=5;
+    let a=0;
     while(tmpArr.length<=answersQuantity)
     {
         if(tmpArr.indexOf(a)===-1)
