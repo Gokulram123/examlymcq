@@ -433,18 +433,18 @@ const inline10= (m)=>m.inlineKeyboard(
 
   bot.action('Foundation Video',ctx=>
              {
-   let video='https://youtube.com/'; 
-  ctx.editMessageText
-  ('Checkout the link..'+video,Extra.HTML().markup(m=>inline8(m)))
+   let video='https://youtube.com';
+        ctx.editMessageText(`<a href="${video}">Here is the foundation video for percentage concept.</a>`,
+            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,3))))
   });
 
 bot.action('Foundation Video ↗️',ctx=>
              {
    let video='https://google.com/'; 
-  ctx.editMessageText
-  ('Checkout the link..'+video,Extra.HTML().markup(m=>inline10(m)))
-  });
-
+  
+ctx.editMessageText(`<a href="${video}">Here is the foundation video for average concept.</a>`,
+            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,3))))
+});
 
 bot.action('Take Test',async ctx=>
              {
