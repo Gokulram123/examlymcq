@@ -443,7 +443,7 @@ bot.action('Foundation Video ↗️',ctx=>
    let video='https://google.com/'; 
   
 ctx.editMessageText(`<a href="${video}">Here is the foundation video for average concept.</a>`,
-            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,3))))
+            Extra.HTML().markup(m=>inline7(m)))
 });
 
 bot.action('Take Test',async ctx=>
