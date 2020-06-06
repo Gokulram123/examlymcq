@@ -10,6 +10,11 @@ const {inlineHandler}=require("./js/inlineHandler.js")
 const {actionHandler}=require("./js/actionHandler.js")
 const {quiz}=require("./js/quiz.js")
 const {quiz1}=require("./js/quiz1.js")
+const schedule=require('node-schedule');
+
+var j=schedule.scheduleJob({hour:20,minute:29,dayOfWeek:6},function(){
+  console.log('Time for tea!');
+});
 
 const rp = require('request-promise');
 
