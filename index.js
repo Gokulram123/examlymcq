@@ -10,7 +10,6 @@ const {inlineHandler}=require("./js/inlineHandler.js")
 const {actionHandler}=require("./js/actionHandler.js")
 const {quiz}=require("./js/quiz.js")
 const {quiz1}=require("./js/quiz1.js")
-const schedule=require('node-schedule');
 
 const rp = require('request-promise');
 
@@ -19,11 +18,6 @@ var request = require('request');
 const Extra=require('telegraf/extra')
 
 
-var date=new Date(2020,5,6,20,38,0)
-
-var j=schedule.scheduleJob(date,function(){
-  console.log('Time for tea!');
-});
 
 bot.use(session());
 
