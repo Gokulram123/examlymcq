@@ -104,6 +104,7 @@ module.exports.actions =async(ctx,actionName) =>
         'Phone_Number':ctx.session.contact,
         'Total_Score':ctx.session.score,
         'Time_Consumed':`${di[0]}mins and ${r}secs`,
+        'Percentage':parseInt(ctx.session.start/3)
       },
       json: true,
     };

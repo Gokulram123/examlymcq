@@ -102,6 +102,7 @@ module.exports.actions1 = async(ctx,actionName) =>
         'Phone_Number':ctx.session.contact,
         'Total_Score':ctx.session.score,
         'Time_Consumed':`${di[0]}mins and ${r}secs`,
+        'Average':parseInt(ctx.session.start1/3)
       },
       json: true,
     };
