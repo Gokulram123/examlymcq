@@ -51,31 +51,31 @@
     "id":7,
     "options":["25%","18.75%","20%","15%"],
     "ans":1,
-    "video":"https://youtube.com",
-    "avgtime":"0 mins and 50 secs"
+    "video":"https://youtu.be/WBLBmkOv7F4",
+    "avgtime":"60 seconds"
    },
    {
-    "ques":"In a school,3 women, 7 men and 5 children are to be arranged in a row. Find the probability that all 3 women are seated together.",
+    "ques":"A sugar solution of 3 litres contains 40% sugar. One litre of is added to this solution What is the percentage of sugar in the new solutions?",
     "id":8,
-    "options":["1/35","1/210","1/45","1/209"],
+    "options":["21","30","60","40"],
     "ans":1,
-    "video":"https://youtube.com",
-   "avgtime":"1 mins and 20 secs"
+    "video":"https://youtu.be/WBLBmkOv7F4",
+   "avgtime":"30 seconds"
    },
    {
-    "ques":"Consider,A+B means A is mother of B\nA×B means A is sister of B\nA=B means A is daughter of B\nA/B means A is father of B\nIn the relation P+R/T×S=Q, how is Q related to R ?",
+    "ques":"Type 5 - Random\nIn a College there are 1800 students. Last day except 4% of the boys all the students were present in the college. Today except 5% of the girls all the students are present in the college, but in both the days number of students present in the college, were same. The number of girls in the college is?",
     "id":9,
-    "options":["Sister","Husband","Wife","Mother"],
+    "options":["1000","1200","800","1500"],
     "ans":2,
-    "video":"https://youtube.com",
-   "avgtime":"1 mins and 21 secs"
+    "video":"https://youtu.be/RstPuc0dEJw",
+   "avgtime":"30 seconds"
    },
    {
-    "ques":"Let CP of 80 articles is same as the SP of X articles. If profit earned is 60%, find the value of X. ",
+    "ques":"In a College there are 2000 students. Last day except 3% of the boys all the students were present in the college. Today except 2% of the girls all the students are present in the college, but in both the days number of students present in the college, were same. The number of girls in the college is?",
     "id":10,
-    "options":[70,60,40,50],
+    "options":[1000,800,1500,1200],
     "ans":3,
-    "video":"https://youtube.com",
-    "avgtime":"1 mins and 15 secs"
+    "video":"https://youtu.be/RstPuc0dEJw",
+    "avgtime":"30 seconds"
    }
 ]

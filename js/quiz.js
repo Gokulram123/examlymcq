@@ -45,11 +45,11 @@ module.exports.actions =async(ctx,actionName) =>
            var r=ctx.session.start%3;
           if(r==0)
             {
-              ctx.session.start+=3;
+              ctx.session.start++;
             }
           else if(r==1)
             {
-             ctx.session.start+=2;
+             ctx.session.start++;
             }
           else if(r==2)
             {
@@ -64,7 +64,7 @@ module.exports.actions =async(ctx,actionName) =>
         }
         ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
     }
-    else if(actionName=='next' && ctx.session.start<4)
+    else if(actionName=='next' && ctx.session.start<9)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -89,7 +89,7 @@ module.exports.actions =async(ctx,actionName) =>
         console.log(di);
         let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4\nTime Consumed is:${di[0]}mins and ${r}secs.</b>`;
         console.log(ctx.from.first_name+ctx.session.score);
-        ctx.editMessageText(msg,
+        ctx.editMessageText("You have completed percentages - part 1 (Basics)"+msg,
             Extra.HTML())
       
           try{
