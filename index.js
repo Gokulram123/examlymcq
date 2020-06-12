@@ -79,7 +79,7 @@ bot.command('quiz',async ctx=>{
 bot.command('percentage',async ctx=>
             {
   ctx.reply(
-     `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline7(m)));
+     `Happy Learning.Would you like to watch the foundation video for percentages or wish to directly jump into the practice questions part?`,Extra.HTML().markup(m=>inline7(m)));
   //await quiz(ctx);
 })
 
