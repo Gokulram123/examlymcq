@@ -436,7 +436,7 @@ const inline10= (m)=>m.inlineKeyboard(
 
   bot.action('Foundation Video',ctx=>
              {
-   let video='https://youtube.com';
+   let video='https://youtu.be/tfSTw-7ymec';
         ctx.editMessageText(`<a href="${video}">Here is the foundation video for percentage concept.</a>`,
             Extra.HTML().markup(m=>inline8(m)))
   });
