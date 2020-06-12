@@ -167,7 +167,7 @@ const newQuestion=async ctx => {
         options:[],
         avgtime:''
     }
-    question.answers=randomAnswers(coins,4);
+    question.answers=randomAnswers(coins,10);
     question.options=question.answers[w].options;
     //console.log(question.answers[w].ques);
     question.correct=question.answers[w].ans;

@@ -1,6 +1,6 @@
 [
   {
-   "ques":"Type 1 - Basic Calculation 43% of 820 + 82% of 570 = ",
+   "ques":"<b>Type 1 - Basic Calculation</b>\n43% of 820 + 82% of 570 = ",
    "id":1,
    "options":[430,820,570,280],
    "ans":1,
@@ -16,7 +16,7 @@
     "avgtime":"45 seconds"
    },
    {
-    "ques":"Type 2 - A % B equals B % A\n If X% of 465 is 623, find 465% of X + 60 is?",
+    "ques":"<b>Type 2 - A % B equals B % A</b>\n If X% of 465 is 623, find 465% of X + 60 is?",
     "id":3,
     "options":["623","683","693","Cannot be determined"],
     "ans":1,
@@ -32,7 +32,7 @@
    "avgtime":"10 seconds"
    },
    {
-    "ques":"Type 3 - Basic Commission Percentage\nAn agent gets a commission of 2.5% on the sales of cloth. If on a certain day, he gets Rs. 12.50 as commission, the cloth sold through him on that day is worth?",
+    "ques":"<b>Type 3 - Basic Commission Percentage</b>\nAn agent gets a commission of 2.5% on the sales of cloth. If on a certain day, he gets Rs. 12.50 as commission, the cloth sold through him on that day is worth?",
     "id":5,
     "options":[500,1000,1250,100],
     "ans":0,
@@ -47,7 +47,7 @@
    "avgtime":"30 seconds"
   },
   {
-    "ques":"Type 4 - Fixed Content & Variable content\nTo a sugar solution of 6 L containing 25% sugar, 2L of water is added. The percentage of sugar In the new solution is",
+    "ques":"<b>Type 4 - Fixed Content & Variable content</b>\nTo a sugar solution of 6 L containing 25% sugar, 2L of water is added. The percentage of sugar In the new solution is",
     "id":7,
     "options":["25%","18.75%","20%","15%"],
     "ans":1,
@@ -63,7 +63,7 @@
    "avgtime":"30 seconds"
    },
    {
-    "ques":"Type 5 - Random\nIn a College there are 1800 students. Last day except 4% of the boys all the students were present in the college. Today except 5% of the girls all the students are present in the college, but in both the days number of students present in the college, were same. The number of girls in the college is?",
+    "ques":"<b>Type 5 - Random</b>\nIn a College there are 1800 students. Last day except 4% of the boys all the students were present in the college. Today except 5% of the girls all the students are present in the college, but in both the days number of students present in the college, were same. The number of girls in the college is?",
     "id":9,
     "options":["1000","1200","800","1500"],
     "ans":2,
