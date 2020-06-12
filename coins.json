@@ -1,11 +1,11 @@
 [
   {
-   "ques":"N men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
+   "ques":"Type 1 - Basic Calculation 43% of 820 + 82% of 570 = ",
    "id":1,
-   "options":[28,24,20,30],
-   "ans":0,
-   "video":"https://youtube.com",
-   "avgtime":"0 mins and 40 secs"
+   "options":[430,820,570,280],
+   "ans":1,
+   "video":"https://youtu.be/uzTjZHJiuTs",
+   "avgtime":"30 seconds"
   },
   {
     "ques":"LOTUS is coded as LNPTTVS and RAIN is coded as RZBHJN. How will DEER be coded in the same language ? ",
