@@ -56,13 +56,14 @@ module.exports.actions =async(ctx,actionName) =>
               ctx.session.start++;
             }
           console.log(ctx.session.start);
+          ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,4))))
         }
         else
         {
             res=`Oh No..It's Wrong!\nCorrect answer :${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.start++;
+           ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
         }
-        ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
     }
     else if(actionName=='next' && ctx.session.start<9)
     {      
@@ -73,7 +74,18 @@ module.exports.actions =async(ctx,actionName) =>
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
-    }else if(actionName=='quit' || ctx.session.start>=4)
+    }else if(actionName=='next1' && ctx.session.start<8)
+    {      
+        var today=new Date();
+        ctx.session.time1=today;
+        ctx.session.start++;
+        let question = await newQuestion(ctx);
+        let logo=question.quest;
+        let msg=logo;
+        ctx.editMessageText(msg,
+            Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
+    }
+  else if(actionName=='quit' || ctx.session.start>=4)
     {
         console.log(ctx.session.contact);
         var today = new Date();
@@ -155,8 +167,8 @@ const keyboard=(m,step,answers)=>{
 else if(step==4)
   {
    return [
-     [m.callbackButton('NEXT','next')],
-     [m.callbackButton('QUIT','quit')]
+     [m.callbackButton('YES','next1')],
+     [m.callbackButton('NO','next')]
    ]
   }
 }
