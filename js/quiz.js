@@ -62,7 +62,7 @@ module.exports.actions =async(ctx,actionName) =>
            ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
         }
     }
-    else if(actionName=='next' && ctx.session.start<9)
+    else if(actionName=='next' && ctx.session.start<=9)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -71,7 +71,7 @@ module.exports.actions =async(ctx,actionName) =>
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
-    }else if(actionName=='no' && ctx.session.start<8)
+    }else if(actionName=='no' && ctx.session.start<=8)
     {      
         var today=new Date();
         ctx.session.time1=today;
