@@ -46,9 +46,14 @@ module.exports.actions =async(ctx,actionName) =>
           console.log(ctx.session.start);
           ctx.session.start++;
           if(ctx.session.start%2!=0)
+            {
+          res+="Do you wish to solve a similar problem?"
           ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,4))))
+            }
           else
+            {
           ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
+            }
         }
         else
         {
