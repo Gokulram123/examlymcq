@@ -87,7 +87,7 @@ module.exports.actions =async(ctx,actionName) =>
     {
         let video=ctx.session.question.url;
         console.log("SOL"+ctx.session.start);
-        ctx.reply(`<a href="${video}">video</a>`,
+        ctx.reply(`<a href="${video}">${video}</a>`,
             Extra.HTML().webPreview(false).markup( m=>m.inlineKeyboard(keyboard(m,3))))
     }
   else if(actionName=='quit' || ctx.session.start>=9)
