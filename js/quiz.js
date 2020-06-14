@@ -166,7 +166,8 @@ else if(step==4)
   {
    return [
      [m.callbackButton('YES','next')],
-     [m.callbackButton('NO','no')]
+     [m.callbackButton('NO','no')],
+     [m.callbackButton('SOLUTION','SOLUTION')]
    ]
   }
 }
