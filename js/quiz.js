@@ -43,7 +43,7 @@ module.exports.actions =async(ctx,actionName) =>
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
            //var r=ctx.session.start%3;
-          console.log(ctx.session.start);
+          //nsole.log(ctx.session.start);
           ctx.session.start++;
           if(ctx.session.start%2!=0)
             {
@@ -135,6 +135,7 @@ module.exports.actions =async(ctx,actionName) =>
     else if(actionName=='SOLUTION')
     {
         let video=ctx.session.question.answers[ctx.session.start].video;
+        console.log(ctx.session.start);
         ctx.reply(`<a href="${video}">Here is the solution video</a>`,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,3))))
     }
