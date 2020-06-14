@@ -55,7 +55,6 @@ ctx.replyWithMarkdown('Please give mobile number access to continue further.', k
 bot.help(ctx=>ctx.reply('Here is the complete walk-through about the Bot.\
 <b><u>\n\nCommands:</u></b>\n\n\
 /start\nWelcome to the Bot !!!\n\n\
-/average\nTake average topic quiz.\n\n\
 /percentage\nTake percentage topic quiz.\n\n\
 ',Extra.HTML()))
 
