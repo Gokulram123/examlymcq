@@ -135,7 +135,7 @@ module.exports.actions =async(ctx,actionName) =>
     else if(actionName=='SOLUTION')
     {
         let video=ctx.session.question.answers[ctx.session.start].video;
-        console.log(ctx.session.start);
+        console.log("SOL"+ctx.session.start);
         ctx.reply(`<a href="${video}">Here is the solution video</a>`,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,3))))
     }
