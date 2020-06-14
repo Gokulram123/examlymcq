@@ -42,20 +42,9 @@ module.exports.actions =async(ctx,actionName) =>
         {
             res=`Yay!Thats Correct\n!Answer : ${question.options[question.correct]}\nTime Taken is :${di[0]} mins and ${r} seconds.Usual time taken is ${question.avgtime}`;
             ctx.session.score++;
-           var r=ctx.session.start%3;
-          if(r==0)
-            {
-              ctx.session.start++;
-            }
-          else if(r==1)
-            {
-             ctx.session.start++;
-            }
-          else if(r==2)
-            {
-              ctx.session.start++;
-            }
+           //var r=ctx.session.start%3;
           console.log(ctx.session.start);
+          ctx.session.start++;
           ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,4))))
         }
         else
@@ -167,8 +156,8 @@ const keyboard=(m,step,answers)=>{
 else if(step==4)
   {
    return [
-     [m.callbackButton('YES','next1')],
-     [m.callbackButton('NO','next')]
+     [m.callbackButton('YES','next')],
+     [m.callbackButton('NO','next1')]
    ]
   }
 }
