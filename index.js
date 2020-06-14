@@ -82,12 +82,12 @@ bot.command('percentage',async ctx=>
   //await quiz(ctx);
 })
 
-bot.command('average',async ctx=>
-            {
-  ctx.reply(
-     `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline9(m)));
-  //await quiz(ctx);
-})
+// bot.command('average',async ctx=>
+//             {
+//   ctx.reply(
+//      `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline9(m)));
+//   //await quiz(ctx);
+// })
 
 // bot.command('total',ctx=>{
   
@@ -437,7 +437,7 @@ const inline10= (m)=>m.inlineKeyboard(
              {
    let video='https://youtu.be/tfSTw-7ymec';
         ctx.editMessageText(`<a href="${video}">https://youtu.be/tfSTw-7ymec</a>`,
-            Extra.HTML().markup(m=>inline8(m)))
+            Extra.HTML().webPreview(false).markup(m=>inline8(m)))
   });
 
 bot.action('Foundation Video ↗️',ctx=>
