@@ -83,7 +83,7 @@ module.exports.actions =async(ctx,actionName) =>
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
     }
-  else if(actionName=='quit' || ctx.session.start>=4)
+  else if(actionName=='quit' || ctx.session.start>=9)
     {
         console.log(ctx.session.contact);
         var today = new Date();
