@@ -104,7 +104,7 @@ module.exports.actions =async(ctx,actionName) =>
         'Phone_Number':ctx.session.contact,
         'Total_Score':ctx.session.score,
         'Time_Consumed':`${di[0]}mins and ${r}secs`,
-        'Percentage':parseInt(ctx.session.start/3)+' Level'
+        'Percentage':parseInt(ctx.session.start/2)+' Level'
       },
       json: true,
     };
@@ -152,6 +152,13 @@ const keyboard=(m,step,answers)=>{
         [m.callbackButton('QUIT','quit')]
     ]
 }
+else if(step==4)
+  {
+   return [
+     [m.callbackButton('NEXT','next')],
+     [m.callbackButton('QUIT','quit')]
+   ]
+  }
 }
 
 const newQuestion=async ctx => {
