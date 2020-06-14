@@ -47,8 +47,8 @@ module.exports.actions =async(ctx,actionName) =>
           ctx.session.start++;
           if(ctx.session.start%2!=0)
             {
-          res+="Do you wish to solve a similar problem?"
-          ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,4))))
+          res+="\n<b>Do you wish to solve a similar problem?</b>"
+          ctx.editMessageText(res,Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,4))))
             }
           else
             {
