@@ -45,7 +45,10 @@ module.exports.actions =async(ctx,actionName) =>
            //var r=ctx.session.start%3;
           console.log(ctx.session.start);
           ctx.session.start++;
+          if(ctx.session.start%2!=0)
           ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,4))))
+          else
+          ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
         }
         else
         {
@@ -63,10 +66,11 @@ module.exports.actions =async(ctx,actionName) =>
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
-    }else if(actionName=='next1' && ctx.session.start<8)
+    }else if(actionName=='no' && ctx.session.start<8)
     {      
         var today=new Date();
         ctx.session.time1=today;
+        if(ctx.session.start%2!=0)
         ctx.session.start++;
         let question = await newQuestion(ctx);
         let logo=question.quest;
@@ -88,7 +92,7 @@ module.exports.actions =async(ctx,actionName) =>
         if(r>='60')
           r='58';
         console.log(di);
-        let msg=`<b>Nice!\nFinal Score:${ctx.session.score}/4\nTime Consumed is:${di[0]}mins and ${r}secs.</b>`;
+        let msg=`<b>Nice!\nFinal Score:${ctx.session.score}\nTime Consumed is:${di[0]}mins and ${r}secs.</b>`;
         console.log(ctx.from.first_name+ctx.session.score);
         ctx.editMessageText("You have completed percentages - part 1 (Basics)"+msg,
             Extra.HTML())
@@ -157,7 +161,7 @@ else if(step==4)
   {
    return [
      [m.callbackButton('YES','next')],
-     [m.callbackButton('NO','next1')]
+     [m.callbackButton('NO','no')]
    ]
   }
 }
