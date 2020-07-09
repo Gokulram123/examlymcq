@@ -1,81 +1,40 @@
 [
-  {
-   "ques":"<b>Type 1 - Basic Calculation</b>\n43% of 820 + 82% of 570 = ",
+ {
+  "ques":"<b>Type 1 -Beginner  Arrays</b>\nWhich of these operators is used to allocate memory to array variable in java?",
    "id":1,
-   "options":[430,820,570,280],
-   "ans":1,
-   "video":"https://youtu.be/uzTjZHJiuTs",
+   "options":["mallloc","alloc","new","new malloc"],
+   "ans":2,
    "avgtime":"30 seconds"
-  },
-  {
-    "ques":"18% of 1150 + 12% of 250 – 35% of 420 = x? ",
-    "id":2,
-    "options":["90","900","180","150"],
-    "ans":0,
-    "video":"https://youtu.be/uzTjZHJiuTs",
-    "avgtime":"45 seconds"
-   },
-   {
-    "ques":"<b>Type 2 - A % B equals B % A</b>\n If X% of 465 is 623, find 465% of X + 60 is?",
-    "id":3,
-    "options":["623","683","693","Cannot be determined"],
-    "ans":1,
-    "video":"https://youtu.be/TsbLlPbRaCo",
-   "avgtime":"10 seconds"
-   },
-   {
-    "ques":"If x% of 420 is 63, find 42% of x ?",
-    "id":4,
-    "options":["30","15","150","6.3"],
-    "ans":3,
-    "video":"https://youtu.be/TsbLlPbRaCo",
-   "avgtime":"10 seconds"
-   },
-   {
-    "ques":"<b>Type 3 - Basic Commission Percentage</b>\nAn agent gets a commission of 2.5% on the sales of cloth. If on a certain day, he gets Rs. 12.50 as commission, the cloth sold through him on that day is worth?",
-    "id":5,
-    "options":[500,1000,1250,100],
-    "ans":0,
-    "video":"https://youtu.be/W7BgHWdcd9M",
-    "avgtime":"30 seconds"
-   },{
-   "ques":"A dealer gets a commission of 3.5% on the sales of land. If, he gets Rs. 2800 as commission, the cost of the land sold through him on the entire deal?",
-   "id":6,
-   "options":[70000,80000,160000,28000],
-   "ans":1,
-   "video":"https://youtu.be/W7BgHWdcd9M",
+ },
+ {
+  "ques":"Which of these is necessary to specify at time of array intialization?",
+   "id":2,
+   "options":["Row","Column","Both Row and Column","None of the mentioned"],
+   "ans":0,
    "avgtime":"30 seconds"
-  },
-  {
-    "ques":"<b>Type 4 - Fixed Content & Variable content</b>\nTo a sugar solution of 6 L containing 25% sugar, 2L of water is added. The percentage of sugar In the new solution is",
-    "id":7,
-    "options":["25%","18.75%","20%","15%"],
-    "ans":1,
-    "video":"https://youtu.be/WBLBmkOv7F4",
-    "avgtime":"60 seconds"
-   },
-   {
-    "ques":"A sugar solution of 3 litres contains 40% sugar. One litre of is added to this solution What is the percentage of sugar in the new solutions?",
-    "id":8,
-    "options":["21","30","60","40"],
-    "ans":1,
-    "video":"https://youtu.be/WBLBmkOv7F4",
-   "avgtime":"30 seconds"
-   },
-   {
-    "ques":"<b>Type 5 - Random</b>\nIn a College there are 1800 students. Last day except 4% of the boys all the students were present in the college. Today except 5% of the girls all the students are present in the college, but in both the days number of students present in the college, were same. The number of girls in the college is?",
-    "id":9,
-    "options":["1000","1200","800","1500"],
-    "ans":2,
-    "video":"https://youtu.be/RstPuc0dEJw",
-   "avgtime":"30 seconds"
-   },
-   {
-    "ques":"In a College there are 2000 students. Last day except 3% of the boys all the students were present in the college. Today except 2% of the girls all the students are present in the college, but in both the days number of students present in the college, were same. The number of girls in the college is?",
-    "id":10,
-    "options":[1000,800,1500,1200],
-    "ans":3,
-    "video":"https://youtu.be/RstPuc0dEJw",
-    "avgtime":"30 seconds"
-   }
+ },
+ {
+  "ques":"Which of these is the incorrect way of declaration?",
+  "id":3,
+  "options":["int arr[] = new int[5]","int [] arr= new int[5]","int arr[]=new int[5]","int arr[]=int[5] new"],
+   "ans":3,
+   "avg time":"30 seconds"
+ },
+ { 
+  "ques":"What will be the output of the following code?",
+              int arr[] = new int [5];
+              System.out.print(arr)",
+  "id":4,
+  "options":["0","value stored in arr[0]","00000","Class name@ hashcode in hexadecimal form"],
+  "ans":3
+  "avg time":"30 seconds"
+ }
+ {
+  "ques":"Which of the following is incorrect statement?",
+  "id":5,
+  "options":["It is necessary to use new operator to intialize an array","Array can be intialized using comma separated exprerssions surrounded by curly braces","Array can be intialized when they are declared","None of the above"
+],
+  "ans":0,
+  "avg time:"60 seconds"
+}
 ]

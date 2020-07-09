@@ -82,12 +82,12 @@ bot.command('percentage',async ctx=>
   //await quiz(ctx);
 })
 
-// bot.command('average',async ctx=>
-//             {
-//   ctx.reply(
-//      `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline9(m)));
-//   //await quiz(ctx);
-// })
+bot.command('average',async ctx=>
+            {
+  ctx.reply(
+     `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline9(m)));
+  await quiz(ctx);
+})
 
 // bot.command('total',ctx=>{
   
