@@ -75,18 +75,18 @@ bot.command('quiz',async ctx=>{
 
 // bot.command('about',ctx=>ctx.reply('Data Source - <a href="https://api.covid19india.org">https://api.covid19india.org</a>\n\n\
 // Developer Contact = <a href="https://t.me/balarp">Bala Srinyvas R P</a>',Extra.HTML().webPreview(false)))
-bot.command('percentage',async ctx=>
+bot.command('begineer',async ctx=>
             {
   ctx.reply(
-     `Happy Learning.Would you like to watch the foundation video for percentages or wish to directly jump into the practice questions part?`,Extra.HTML().markup(m=>inline7(m)));
+     `Happy Learning.Would you like to watch the foundation video for begineer MCQ's or wish to directly jump into the practice questions part?`,Extra.HTML().markup(m=>inline7(m)));
   //await quiz(ctx);
 })
 
-bot.command('average',async ctx=>
+bot.command('advanced',async ctx=>
             {
   ctx.reply(
-     `Happy Learning.Click on any of the options below:`,Extra.HTML().markup(m=>inline9(m)));
-  await quiz(ctx);
+     `Happy Learning.Would you like to watch the foundation video for begineer MCQ's or wish to directly jump into the practice questions part?`,Extra.HTML().markup(m=>inline9(m)));
+  //await quiz(ctx);
 })
 
 // bot.command('total',ctx=>{
