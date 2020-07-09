@@ -112,7 +112,7 @@ module.exports.actions =async(ctx,actionName) =>
           try{
     const requestOptions = {
       method: 'POST',
-      uri: 'https://balarp.glitch.me/api/details/',
+      uri: 'https://motley-cut-calf.glitch.me/api/details/',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -120,8 +120,7 @@ module.exports.actions =async(ctx,actionName) =>
         'Name':ctx.from.first_name,
        'Phone_Number':ctx.session.contact,
         'Total_Score':ctx.session.score,
-        'Time_Consumed':`${di[0]}mins and ${r}secs`,
-        'Percentage':parseInt(ctx.session.start/2)+' Level'
+        'Time_Consumed':`${di[0]}mins and ${r}secs`
       },
       json: true,
     };
