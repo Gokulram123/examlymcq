@@ -1,42 +1,98 @@
 [
-  {
-   "ques":"M men finish a job in 15 days. If there were 8 people less, they would have taken 6 days more to finish the same work. What is the value of N ? ",
-   "id":1,
-   "options":[28,24,20,30],
-   "ans":0,
-   "video":"https://youtube.com",
-   "avgtime":"0 mins and 40 secs"
+ {
+  "ques":"<b>Type 1 - Beginner Data Types</b>/nWhat is the range of short data type in Java?",
+  "id":1,
+  "options":["-128 to 127","-32768 to 32767","-2147483648 to 2147483647","None of the above"],
+  "ans":1,
+  "video":"https://youtu.be/0MFC_Vw9NxY",
+  "avgtime":"30 seconds"
   },
-  {
-    "ques":"Here,LOTUS is coded as LNPTTVS and RAIN is coded as RZBHJN. How will DEER be coded in the same language ? ",
-    "id":2,
-    "options":["CEEEQS","DCDCDR","DDFDFR","None of these"],
-    "ans":2,
-    "video":"https://youtube.com",
-    "avgtime":"0 mins and 50 secs"
-   },
-   {
-    "ques":"In a school,3 women, 7 men and 5 children are to be arranged in a row. Find the probability that all 3 women are seated together.",
-    "id":3,
-    "options":["1/35","1/210","1/45","1/209"],
-    "ans":1,
-    "video":"https://youtube.com",
-   "avgtime":"1 mins and 20 secs"
-   },
-   {
-    "ques":"Consider,A+B means A is mother of B\nA×B means A is sister of B\nA=B means A is daughter of B\nA/B means A is father of B\nIn the relation P+R/T×S=Q, how is Q related to R ?",
-    "id":4,
-    "options":["Sister","Husband","Wife","Mother"],
-    "ans":2,
-    "video":"https://youtube.com",
-   "avgtime":"1 mins and 21 secs"
-   },
-   {
-    "ques":"Let CP of 80 articles is same as the SP of X articles. If profit earned is 60%, find the value of X. ",
-    "id":5,
-    "options":[70,60,40,50],
-    "ans":3,
-    "video":"https://youtube.com",
-    "avgtime":"1 mins and 15 secs"
-   }
-]
+ {
+  "ques":"An expression involving byte, int, and literal numbers is promoted to which of these?",
+   "id":2,
+   "options":["int","long","byte","float"],
+   "ans":0,
+   "video":"https://youtu.be/0MFC_Vw9NxY",
+   "avgtime":"30 seconds"
+ },
+ {
+  "ques":"Which of these literals can be contained in float data type variable?",
+   "id":3,
+   "options":["-1.7e+308","-3.4e+038","1.7e+308","-3.4e+050"],
+   "ans":1,
+   "video":"https://youtu.be/0MFC_Vw9NxY",
+   "avgtime":"30 seconds"
+ },
+ {
+  "ques":"Which data type value is returned by all transcendtal math functions?",
+  "id":4,
+  "options":["int","float","double","long"],
+  "ans":2,
+  "video":"https://youtu.be/0MFC_Vw9NxY",
+  "avgtime":"30 seconds"
+ },
+ {
+ "ques":"<b>Type 2 - Intermediate OOPs</b>\nWhich of the following is not OOPS concept in java?",
+  "id":5,
+  "options":["Inheritance","Encapsulation","Polymorphism","Compilation"],
+  "ans":3,
+  "video":"https://youtu.be/7GwptabrYyk",
+  "avgtime":"45 seconds"
+ },
+ {
+  "ques":"When does method overloading is determined?",
+  "id":6,
+  "options":["At run time","At compile time","At coding time","At execution time"],
+  "ans":1,
+  "video":"https://youtu.be/7GwptabrYyk",
+  "avgtime":"45 seconds"
+ },
+ {
+  "ques":"What is called where child object gets killed if parent object is killed?",
+  "id":7,
+  "options":["Aggregation","Composition","Encapsulation","Association"],
+  "ans":1,
+  "video":"https://youtu.be/7GwptabrYyk",
+  "avgtime":"45 seconds"
+ },
+ {
+  "ques":"Method overriding  is combination of inheritance and polymorphism?",
+  "id":8,
+  "options":["True","False"],
+  "ans":0,
+  "video":"https://youtu.be/7GwptabrYyk",
+  "avgtime":"45 seconds"
+ },
+ {
+ "ques":"<b>Type 3 - Advanced Inheritance</b>\nWhich of this keyword must be used to inherit a class?",
+  "id":9,
+  "options":["super","this","extent","extends"],
+  "ans":3,
+  "video":"https://youtu.be/_9R_in_7cT4"
+  "avgtime":"60 seconds"
+ },
+ {
+  "ques":"A class member declared protected becomes a member of subclass of which type?",
+  "id":10,
+  "options":["public member","private member","protected member","static member"],
+  "ans":1,
+  "video":"https://youtu.be/_9R_in_7cT4",
+  "avgtime":"60 seconds"
+ },
+ {
+  "ques":"Using which of the following multiple inheritance in java can be implemented",
+  "id":11,
+  "options":["Interfaces","Multithreading","Protected methods","Private methods"],
+  "ans":0,
+  "video":"https://youtu.be/_9R_in_7cT4",
+  "avgtime":"60 seconds"
+ },
+ {
+  "ques":"Which of the following is used for implementing inheritance through class?",
+  "id":12,
+  "options":["inherited","using","extends","implements"],
+  "ans":2,
+  "video":"https://youtu.be/_9R_in_7cT4",
+  "avgtime":"60 seconds"
+ }
+]  

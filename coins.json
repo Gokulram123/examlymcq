@@ -1,9 +1,11 @@
 [
+ 
  {
-  "ques":"<b>Type 1 -Beginner  Arrays</b>\nWhich of these operators is used to allocate memory to array variable in java?",
+  "ques":"<b>Type 1 - Beginner  Arrays</b>\nWhich of these operators is used to allocate memory to array variable in java?",
    "id":1,
-   "options":["mallloc","alloc","new","new malloc"],
+   "options":["malloc","alloc","new","new malloc"],
    "ans":2,
+   "video":"https://youtu.be/TmM9XAIKa-Y",
    "avgtime":"30 seconds"
  },
  {
@@ -11,6 +13,7 @@
    "id":2,
    "options":["Row","Column","Both Row and Column","None of the mentioned"],
    "ans":0,
+   "video":"https://youtu.be/TmM9XAIKa-Y",
    "avgtime":"30 seconds"
  },
  {
@@ -18,20 +21,79 @@
   "id":3,
   "options":["int arr[] = new int[5]","int [] arr= new int[5]","int arr[]=new int[5]","int arr[]=int[5] new"],
    "ans":3,
-   "avgtime":"30 seconds"
+   "video":"https://youtu.be/TmM9XAIKa-Y",
+   "avg time":"30 seconds"
  },
  { 
-  "ques":"What will be the output of the following code?,int arr[] = new int [5];System.out.print(arr)",
+  "ques":"What will be the output of the following code?int arr[] = new int [5];System.out.print(arr)",
   "id":4,
   "options":["0","value stored in arr[0]","00000","Class name@ hashcode in hexadecimal form"],
   "ans":3,
+  "video":"https://youtu.be/TmM9XAIKa-Y",
   "avgtime":"30 seconds"
  },
  {
-  "ques":"Which of the following is incorrect statement?",
+  "ques":"<b>Type2 - Intermediate Class fundamentals</b>\nWhat is stored in the object obj in following lines of java code?",
   "id":5,
-  "options":["It is necessary to use new operator to intialize an array","Array can be intialized using comma separated exprerssions surrounded by curly braces","Array can be intialized when they are declared","None of the above"],
+  "options":["Memory address of allocated memory of the object","NULL","Any arbitrary pointer","Garbage"],
+  "ans":1,
+  "video":"https://youtu.be/cXj1hHdMNk4",
+  "avgtime":"45 seconds"
+ },
+ {
+  "ques":"Which of these keywords is used to make a class?",
+  "id":6,
+  "options":["class","struct","int","none of the mentioned"],
   "ans":0,
+  "video":"https://youtu.be/cXj1hHdMNk4",
+  "avgtime":"45 seconds"
+ },
+ {
+  "ques":"Which of the following is used to allocate memory for an object?",
+  "id":7,
+  "options":["malloc","alloc","new","give"],
+  "ans":2,
+  "video":"https://youtu.be/cXj1hHdMNk4",
+  "avgtime":"45 seconds"
+  },
+ {
+  "ques":"Which of  the following is a valid declaration of an object of class box?",
+  "id":8,
+  "options":["Box obj = new Box();","Box obj = new Box;","obj = new Box();","new Box obj;"],
+  "ans":0,
+  "video":"https://youtu.be/cXj1hHdMNk4",
+  "avgtime":"45 seconds"
+ },
+ {
+  "ques":"<b>Type 3 - Advanced String</b>\nWhich of these class is superclass of String and StringBuffer class?",
+  "id":9,
+  "options":["java.util","java.lang","ArrayList","None of the above"],
+  "ans":1,
+  "video":"https://youtu.be/N63JCXwdd14",
   "avgtime":"60 seconds"
-}
+ },
+ {
+   "ques":"Which of this method of class String is used to obtain a length of String object?",
+   "id":10,
+   "options":["get()","Sizeof()","lengthof()","length()"],
+   "ans":3,
+   "video":"https://youtu.be/N63JCXwdd14",
+   "avgtime":"60 seconds"
+ },
+ {
+  "ques":"Which of these constructor is used to create an empty String object?",
+  "id":11,
+  "options":["String()","String(void)","String(0)","None of the mentioned"],
+  "ans":0,
+  "video":"https://youtu.be/N63JCXwdd14",
+  "avgtime":"60 seconds"
+ },
+ {
+  "ques":"Which of these is an incorrect statement?",
+  "id":12,
+  "options":["String objects are immutable, they cannot be changed","String object can point to some other reference of String variable","StringBuffer class is used to store string in a buffer for later use","None of the above"],
+  "ans":2,
+  "video":"https://youtu.be/N63JCXwdd14",
+  "avgtime":"60 seconds"
+ }
 ]
