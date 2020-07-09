@@ -41,7 +41,7 @@ bot.start(ctx=>
   }catch(e)
   {}
   
-  ctx.reply(`Hello ${ctx.from.first_name} , Welcome to the Apti-Quiz Bot.`)
+  ctx.reply(`Hello ${ctx.from.first_name} , Welcome to the Coding-MCQ Bot.`)
   const keyboard = Extra.markup(markup =>
     markup
     .resize()
@@ -55,7 +55,8 @@ ctx.replyWithMarkdown('Please give mobile number access to continue further.', k
 bot.help(ctx=>ctx.reply('Here is the complete walk-through about the Bot.\
 <b><u>\n\nCommands:</u></b>\n\n\
 /start\nWelcome to the Bot !!!\n\n\
-/percentage\nTake percentage topic quiz.\n\n\
+/set1\nPractice questions on Set-1\n\n\
+/set2\nPractice questions on Set-2\n\n\
 ',Extra.HTML()))
 
 
@@ -75,14 +76,14 @@ bot.command('quiz',async ctx=>{
 
 // bot.command('about',ctx=>ctx.reply('Data Source - <a href="https://api.covid19india.org">https://api.covid19india.org</a>\n\n\
 // Developer Contact = <a href="https://t.me/balarp">Bala Srinyvas R P</a>',Extra.HTML().webPreview(false)))
-bot.command('begineer',async ctx=>
+bot.command('set1',async ctx=>
             {
   ctx.reply(
      `Happy Learning.Would you like to watch the foundation video for begineer MCQ's or wish to directly jump into the practice questions part?`,Extra.HTML().markup(m=>inline7(m)));
   //await quiz(ctx);
 })
 
-bot.command('advanced',async ctx=>
+bot.command('set2',async ctx=>
             {
   ctx.reply(
      `Happy Learning.Would you like to watch the foundation video for begineer MCQ's or wish to directly jump into the practice questions part?`,Extra.HTML().markup(m=>inline9(m)));
@@ -435,14 +436,14 @@ const inline10= (m)=>m.inlineKeyboard(
 
   bot.action('Foundation Video',ctx=>
              {
-   let video='https://youtu.be/tfSTw-7ymec';
+   let video='https://www.youtube.com/watch?v=aqHhpahguVY';
         ctx.editMessageText(`<a href="${video}">https://youtu.be/tfSTw-7ymec</a>`,
             Extra.HTML().webPreview(false).markup(m=>inline8(m)))
   });
 
 bot.action('Foundation Video ↗️',ctx=>
              {
-   let video='https://google.com/'; 
+   let video='https://www.youtube.com/watch?v=aqHhpahguVY'; 
   
 ctx.editMessageText(`<a href="${video}">Here is the foundation video for average concept.</a>`,
             Extra.HTML().markup(m=>inline10(m)))

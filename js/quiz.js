@@ -71,7 +71,7 @@ module.exports.actions =async(ctx,actionName) =>
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
-    }else if(actionName=='no' && ctx.session.start<=3)
+    }else if(actionName=='no' && ctx.session.start<=10)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -87,10 +87,10 @@ module.exports.actions =async(ctx,actionName) =>
     {
         let video=ctx.session.question.url;
         console.log("SOL"+ctx.session.start);
-        ctx.reply(`<a href="${video}">${video}</a>`,
+        ctx.editMessageText(`<a href="${video}">${video}</a>`,
             Extra.HTML().webPreview(false).markup( m=>m.inlineKeyboard(keyboard(m,3))))
     }
-  else if(actionName=='quit' || ctx.session.start>=4)
+  else if(actionName=='quit' || ctx.session.start>=11)
     {
         console.log(ctx.session.contact);
         var today = new Date();
@@ -185,7 +185,7 @@ const newQuestion=async ctx => {
         options:[],
         avgtime:''
     }
-    question.answers=randomAnswers(coins,10);
+    question.answers=randomAnswers(coins,15);
     question.options=question.answers[w].options;
     //console.log(question.answers[w].ques);
     question.correct=question.answers[w].ans;
@@ -193,7 +193,7 @@ const newQuestion=async ctx => {
     question.quest=question.answers[w].ques;
     question.avgtime=question.answers[w].avgtime;
     //console.log(question);
-    if(w>=4)
+    if(w>=12)
     w=0;
     ctx.session.question=question;
     ctx.session.score=ctx.session.score || 0;
