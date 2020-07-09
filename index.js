@@ -69,7 +69,7 @@ bot.command('quiz',async ctx=>{
         {
    ctx.session.contact=ctx.message.contact.phone_number;
    console.log(ctx.session.contact);
-   ctx.reply('Thank you.Your id has been validated.\nHere is the list of courses offered.<b><u>\n\nCommands:</u></b>\n\n/percentage\nConcepts on Percentage topic.\n\n',Extra.HTML());
+   ctx.reply('Thank you.Your id has been validated.\nHere is the list of courses offered.<b><u>\n\nCommands:</u></b>\n\n/start\nWelcome to the Bot !!!\n\n/set1\nPractice questions on Set-1\n\n/set2\nPractice questions on Set-2\n\n',Extra.HTML());
  })
 
 // bot.command('district',ctx=>ctx.reply('Enter the District name in India for which the count is needed :'))
@@ -437,7 +437,7 @@ const inline10= (m)=>m.inlineKeyboard(
   bot.action('Foundation Video',ctx=>
              {
    let video='https://www.youtube.com/watch?v=aqHhpahguVY';
-        ctx.editMessageText(`<a href="${video}">https://youtu.be/tfSTw-7ymec</a>`,
+        ctx.editMessageText(`<a href="${video}">https://www.youtube.com/watch?v=aqHhpahguVY</a>`,
             Extra.HTML().webPreview(false).markup(m=>inline8(m)))
   });
 
@@ -445,7 +445,7 @@ bot.action('Foundation Video ↗️',ctx=>
              {
    let video='https://www.youtube.com/watch?v=aqHhpahguVY'; 
   
-ctx.editMessageText(`<a href="${video}">Here is the foundation video for average concept.</a>`,
+ctx.editMessageText(`<a href="${video}">https://www.youtube.com/watch?v=aqHhpahguVY</a>`,
             Extra.HTML().markup(m=>inline10(m)))
 });
  
