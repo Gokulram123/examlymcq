@@ -45,11 +45,11 @@ module.exports.actions1 = async(ctx,actionName) =>
             var r=ctx.session.start1%3;
           if(r==0)
             {
-              ctx.session.start1+=3;
+              ctx.session.start1++;
             }
           else if(r==1)
             {
-             ctx.session.start1+=2;
+             ctx.session.start1++;
             }
           else if(r==2)
             {
