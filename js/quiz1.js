@@ -93,7 +93,7 @@ module.exports.actions1 = async(ctx,actionName) =>
           try{
     const requestOptions = {
       method: 'POST',
-      uri: 'https://balarp.glitch.me/api/details/',
+      uri: 'https://motley-cut-calf.glitch.me/api/details/',
       headers: {
         'Content-Type': 'application/json'
       },
