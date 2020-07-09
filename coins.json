@@ -18,23 +18,20 @@
   "id":3,
   "options":["int arr[] = new int[5]","int [] arr= new int[5]","int arr[]=new int[5]","int arr[]=int[5] new"],
    "ans":3,
-   "avg time":"30 seconds"
+   "avgtime":"30 seconds"
  },
  { 
-  "ques":"What will be the output of the following code?",
-              int arr[] = new int [5];
-              System.out.print(arr)",
+  "ques":"What will be the output of the following code?,int arr[] = new int [5];System.out.print(arr)",
   "id":4,
   "options":["0","value stored in arr[0]","00000","Class name@ hashcode in hexadecimal form"],
-  "ans":3
-  "avg time":"30 seconds"
- }
+  "ans":3,
+  "avgtime":"30 seconds"
+ },
  {
   "ques":"Which of the following is incorrect statement?",
   "id":5,
-  "options":["It is necessary to use new operator to intialize an array","Array can be intialized using comma separated exprerssions surrounded by curly braces","Array can be intialized when they are declared","None of the above"
-],
+  "options":["It is necessary to use new operator to intialize an array","Array can be intialized using comma separated exprerssions surrounded by curly braces","Array can be intialized when they are declared","None of the above"],
   "ans":0,
-  "avg time:"60 seconds"
+  "avgtime":"60 seconds"
 }
 ]

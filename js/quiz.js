@@ -62,7 +62,7 @@ module.exports.actions =async(ctx,actionName) =>
            ctx.editMessageText(res,Extra.markup( m=>m.inlineKeyboard(keyboard(m,2))))
         }
     }
-    else if(actionName=='next' && ctx.session.start<=9)
+    else if(actionName=='next' && ctx.session.start<=4)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -71,7 +71,7 @@ module.exports.actions =async(ctx,actionName) =>
         let msg=logo;
         ctx.editMessageText(msg,
             Extra.HTML().markup( m=>m.inlineKeyboard(keyboard(m,1,question.options))))
-    }else if(actionName=='no' && ctx.session.start<=8)
+    }else if(actionName=='no' && ctx.session.start<=3)
     {      
         var today=new Date();
         ctx.session.time1=today;
@@ -90,7 +90,7 @@ module.exports.actions =async(ctx,actionName) =>
         ctx.reply(`<a href="${video}">${video}</a>`,
             Extra.HTML().webPreview(false).markup( m=>m.inlineKeyboard(keyboard(m,3))))
     }
-  else if(actionName=='quit' || ctx.session.start>=9)
+  else if(actionName=='quit' || ctx.session.start>=4)
     {
         console.log(ctx.session.contact);
         var today = new Date();
