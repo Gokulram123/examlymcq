@@ -1,20 +1,20 @@
 # examlymcq
 ## About:
-*I have created this bot in telegram.
+*I have created this bot in telegram.</br>
 *Here which i am using this bot for conducting the multiple choice question test in java programming.
 
 ## Features:
-*This bot is used for conductig quiz
-*By using the mark that the student got, we can separate them as beginner,intermediate and advanced.
-*Here we have fixed a timer which is used to calculate how much time did we took for finishing the test.
+*This bot is used for conductig quiz.</br>
+*By using the mark that the student got, we can separate them as beginner,intermediate and advanced.</br>
+*Here we have fixed a timer which is used to calculate how much time did we took for finishing the test.</br>
 *Here i have created two sets, In which each set has three levels.
    
 ## User Guide:
-*First of all we need to install telegram.
-*After installing the app we can start the quiz.
-*Then you need to search the bot name as Examlyquizbot.
-*/start command is used to start the bot.
-*Once we use the start command the quiz will be started.
+*First of all we need to install telegram.</br>
+*After installing the app we can start the quiz.</br>
+*Then you need to search the bot name as Examlyquizbot.</br>
+*/start command is used to start the bot.</br>
+*Once we use the start command the quiz will be started.</br>
   
   ### How to use github code?
      *Clone or download the repository.
@@ -24,7 +24,6 @@
   
   ## Developer
      *Bot link : //t.me/Examlyquizbot
-     *Developer contact:
-     *Gokulram.K
+     *Developer contact : Gokulram.K
      *Email id : gokulramkrishnasamy@gmail.com
      *contact number : 9597652128
