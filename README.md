@@ -15,6 +15,7 @@
 *Then you need to search the bot name as Examlyquizbot.</br>
 */start command is used to start the bot.</br>
 *Once we use the start command the quiz will be started.</br>
+![WhatsApp Image 2020-07-10 at 6 11 26 PM](https://user-images.githubusercontent.com/64969007/87156603-906dde80-c2da-11ea-83e6-19292c5ff071.jpeg)
   
   ### How to use github code?
      *Clone or download the repository.
