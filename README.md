@@ -12,6 +12,7 @@
 ## User Guide:
 *First of all we need to install telegram.</br>
 *After installing the app we can start the quiz.</br>
+![WhatsApp Image 2020-07-10 at 6 11 24 PM (1)](https://user-images.githubusercontent.com/68016745/87157401-d7100880-c2db-11ea-8c01-4946a35c67d3.jpeg)
 *Then you need to search the bot name as Examlyquizbot.</br>
 */start command is used to start the bot.</br>
 *Once we use the start command the quiz will be started.</br>
